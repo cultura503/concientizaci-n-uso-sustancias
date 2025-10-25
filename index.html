@@ -6,160 +6,185 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<div id="fondo-bolitas"></div>
+  <div id="fondo-bolitas"></div>
+  <div id="gigante" class="asomar"></div>
+  <div id="imagen-secundaria" class="deslizante"></div>
 
-</script>
-
-<div id="gigante" class="asomar"></div>
-
-  <header>
+  <header class="bloque-header">
     <img src="imagenes/portada.png" alt="Portada: Consecuencias de las Drogas" class="portada">
     <h1>Concientización sobre el Uso de Sustancias</h1>
   </header>
-<div class="sos-container">
-  <div class="sos-icon" title="Haz clic para obtener ayuda">
-    <a href="https://www.gob.mx/salud" target="_blank">SOS</a>
-  </div>
-  <div class="sos-tooltip">
-    ¿Necesitas ayuda o conoces a alguien que la necesite?<br>
-    📞 <strong>800 911 2000</strong><br>
-    👉 <a href="https://www.gob.mx/salud/acciones-y-programas/centro-de-atencion-ciudadana-contra-las-adicciones" target="_blank">Visita CCENTRO DE ATENCION CIUDADANA CONTRA LAS ADICCIONES para más información</a>
-  </div>
-</div>
 
-
-  <!-- Índice de navegación -->
+  <div class="indice-con-imagen">
   <nav class="indice">
     <h2>📚 Índice</h2>
     <ul>
-      <li><a href="#corto">Efectos a Corto Plazo</a></li>
-      <li><a href="#medio">Efectos a Mediano Plazo</a></li>
-      <li><a href="#largo">Efectos a Largo Plazo</a></li>
-      <li><a href="#prevencion">Actividades Preventivas</a></li>
-      <li><a href="#tipos">Tipos de Sustancias</a></li>
-      <li><a href="#video">Video Educativo</a></li>
-      <li><a href="#gobierno">Enlaces Oficiales</a></li>
+      <li><a href="#corto">Corto Plazo</a></li>
+      <li><a href="#medio">Mediano Plazo</a></li>
+      <li><a href="#largo">Largo Plazo</a></li>
+      <li><a href="#prevencion">Prevención</a></li>
+      <li><a href="#tipos">Tipos</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#gobierno">Enlaces</a></li>
     </ul>
   </nav>
+  <div class="imagen-indice">
+   <img src="imagenes/imagen-lateral.png" alt="imagen junto al indice">
+  </div>
+ </div>
 
-  <main>
-    <section class="efectos" id="corto">
-      <h2>Efectos a Corto Plazo</h2>
-      <div class="contenedor-flex">
-        <img src="imagenes/efectos-corto.png" alt="Efectos a corto plazo" class="imagen">
-        <div class="texto">
-          <p>Los Los efectos inmediatos del consumo de drogas pueden manifestarse tanto a nivel físico como mental, y suelen aparecer minutos después de la ingesta. En el plano emocional, es común experimentar cambios bruscos en el estado de ánimo, como euforia, ansiedad, irritabilidad o tristeza repentina. Estos cambios pueden generar comportamientos impulsivos y una disminución del juicio crítico, lo que aumenta el riesgo de tomar decisiones peligrosas. A nivel perceptivo, muchas sustancias alteran la forma en que se percibe el entorno: los colores, sonidos y sensaciones pueden distorsionarse, provocando alucinaciones o una desconexión de la realidad.
+ <section class="contenedor-flex impar">
+  <img src="imagenes/efectos-corto.png" alt=" Consecuencias a corto plazo" class="imagen">
+  <div class="texto">
+    <h2>Corto Plazo</h2>
+    <p>⏱️ Los efectos inmediatos del consumo de drogas pueden manifestarse tanto a nivel físico como mental, y suelen aparecer minutos después de la ingesta.</p>
 
-En el cuerpo, los efectos inmediatos incluyen pérdida de coordinación motora, dificultad para caminar, movimientos torpes y temblores. También pueden presentarse náuseas, vómitos, sudoración excesiva, mareos y visión borrosa. Algunas sustancias aceleran el ritmo cardíaco y la respiración, lo que puede generar palpitaciones o sensación de agitación. En casos más extremos, se pueden producir desmayos, convulsiones o reacciones alérgicas graves.</p>
-        </div>
-      </div>
-    </section>
+    <p>😵‍💫 En el plano emocional, es común experimentar cambios bruscos en el estado de ánimo, como euforia, ansiedad, irritabilidad o tristeza repentina. Estos cambios pueden generar comportamientos impulsivos y una disminución del juicio crítico, lo que aumenta el riesgo de tomar decisiones peligrosas.</p>
 
-    <section class="efectos" id="medio">
-      <h2>Efectos a Mediano Plazo</h2>
-      <div class="contenedor-flex">
-        <img src="imagenes/efectos-medio.png" alt="Efectos a mediano plazo" class="imagen">
-        <div class="texto">
-          <p>El uso prolongado de sustancias puede alterar rutinas, debilitar la motivación y generar una desconexión progresiva con los objetivos personales. A nivel escolar, se traduce en distracciones constantes, pérdida de interés y bajo rendimiento. En lo emocional, la dependencia puede hacer que la sustancia se convierta en el único recurso para enfrentar tensiones, dificultando el manejo autónomo de los problemas. Además, las relaciones familiares suelen resentirse: se rompe la comunicación, surgen conflictos y se debilita el apoyo afectivo, creando un entorno de aislamiento que refuerza el consumo.</p>
-        </div>
-      </div>
-    </section>
+    <p>🎭 A nivel perceptivo, muchas sustancias alteran la forma en que se percibe el entorno: los colores, sonidos y sensaciones pueden distorsionarse, provocando alucinaciones o una desconexión de la realidad.</p>
 
-    <section class="efectos" id="largo">
-      <h2>Efectos a Largo Plazo</h2>
-      <div class="contenedor-flex">
-        <img src="imagenes/efectos-largo.png" alt="Efectos a largo plazo" class="imagen">
-        <div class="texto">
-          <h3 class="subtitulo">🧠 Efectos Mentales</h3>
-          <ul>
-            <li>La adicción y los trastornos mentales graves pueden desarrollarse, independientemente de la sustancia.</li>
-          </ul>
-          <h3 class="subtitulo">💪 Efectos Físicos</h3>
-          <ul>
-            <li>Riesgo cardiovascular aumentado con estimulantes.</li>
-            <li>Alucinógenos persistentes pueden afectar la salud mental.</li>
-            <li>Depresores, en exceso, llevan a daño orgánico irreversible.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <p>🚶‍♂️ En el cuerpo, los efectos inmediatos incluyen pérdida de coordinación motora, dificultad para caminar, movimientos torpes y temblores.</p>
 
-    <section class="prevencion" id="prevencion">
-      <h2>Actividades para Prevenir el Consumo</h2>
-      <div class="contenedor-flex">
-        <img src="imagenes/gigante-azul.png" alt="Actividades preventivas" class="imagen">
-        <div class="texto">
-          <p>1. El deporte puede considerarse como una actividad física con estructura y normas que permiten competir con uno mismo o con otros.</p>
-          <p>2. La expresión artística permite canalizar emociones a través de procesos creativos, sin necesidad de pensar en el juicio de los demás.</p>
-          <p>3. El uso positivo de internet ofrece acceso a información, juegos y libros que ayudan a distraerse y evitar el consumo.</p>
-          <p>4.Los espacios de diálogo promueven la reflexión y el pensamiento crítico, permitiendo compartir experiencias y fortalecer decisiones.</p>
-          <p>5.La convivencia familiar fortalece los vínculos afectivos y crea un entorno de confianza donde es más fácil hablar de temas difíciles.</p>
+    <p>🤢 También pueden presentarse náuseas, vómitos, sudoración excesiva, mareos y visión borrosa.</p>
 
+    <p>💓 Algunas sustancias aceleran el ritmo cardíaco y la respiración, lo que puede generar palpitaciones o sensación de agitación.</p>
 
-
-
-        </div>
-      </div>
-    </section>
-
-    <section class="tipos destacado" id="tipos">
-  <h2>Tipos de Sustancias y sus Efectos</h2>
-  <img src="imagenes/tipos-sustancias.png" alt="Tipos de sustancias" class="imagen imagen-banner">
-  </section>
-
-   <section class="video" id="video">
-  <h2>🎥 Video Educativo</h2>
-  <p>Este video explica los riesgos del consumo de sustancias:</p>
-  <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/HUngLgGRJpo" title="Video educativo sobre drogas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>⚠️ En casos más extremos, se pueden producir desmayos, convulsiones o reacciones alérgicas graves.</p>
   </div>
 </section>
 
-    <!-- Enlaces oficiales -->
-    <section class="gobierno" id="gobierno">
-      <h2>🏛️ Enlaces Oficiales sobre los Peligros de las Drogas</h2>
+  <section class="contenedor-flex par">
+  <img src="imagenes/efectos-medio.png" alt="Consecuencias a mediano plazo" class="imagen">
+  <div class="texto">
+    <h2>Mediano Plazo</h2>
+    <p>🕒 El uso prolongado de sustancias puede alterar rutinas, debilitar la motivación y generar una desconexión progresiva con los objetivos personales.</p>
+    <p>🏫 A nivel escolar, se traduce en distracciones constantes, pérdida de interés y bajo rendimiento.</p>
+    <p>😟 En lo emocional, la dependencia puede hacer que la sustancia se convierta en el único recurso para enfrentar tensiones, dificultando el manejo autónomo de los problemas.</p>
+    <p>👨‍👩‍👧‍👦 Además, las relaciones familiares suelen resentirse: se rompe la comunicación, surgen conflictos y se debilita el apoyo afectivo, creando un entorno de aislamiento que refuerza el consumo.</p>
+  </div>
+</section>
+
+
+   <section class="contenedor-flex impar">
+  <img src="imagenes/efectos-largo.png" alt="Consecuencias a largo plazo" class="imagen">
+  <div class="texto">
+    <h2>Largo Plazo</h2>
+
+    <h3>🧠 Mentales</h3>
+    <ul>
+      <li>Adicción y trastornos mentales graves.</li>
+      <li>La adicción y los trastornos mentales graves pueden desarrollarse, independientemente de la sustancia.</li>
+    </ul>
+
+    <h3>💪 Físicos</h3>
+    <ul>
+      <li>Riesgo cardiovascular.</li>
+      <li>Riesgo cardiovascular aumentado con estimulantes.</li>
+      <li>Alucinógenos persistentes.</li>
+      <li>Alucinógenos persistentes pueden afectar la salud mental.</li>
+      <li>Daño orgánico irreversible.</li>
+      <li>Depresores, en exceso, llevan a daño orgánico irreversible.</li>
+    </ul>
+  </div>
+</section>
+
+
+  <section class="contenedor-flex par">
+  <img src="imagenes/gigante-azul.png" alt="Prevención" class="imagen">
+  <div class="texto">
+    <h2>Prevención</h2>
+    <ul>
+      <li>
+        🏃‍♂️ <strong>Deporte</strong><br>
+        El deporte puede considerarse como una actividad física con estructura y normas que permiten competir con uno mismo o con otros.
+      </li>
+      <li>
+        🎨 <strong>Expresión artística</strong><br>
+        La expresión artística permite canalizar emociones a través de procesos creativos, sin necesidad de pensar en el juicio de los demás.
+      </li>
+      <li>
+        🌐 <strong>Internet positivo</strong><br>
+        El uso positivo de internet ofrece acceso a información, juegos y libros que ayudan a distraerse y evitar el consumo.
+      </li>
+      <li>
+        🗣️ <strong>Diálogo</strong><br>
+        Los espacios de diálogo promueven la reflexión y el pensamiento crítico, permitiendo compartir experiencias y fortalecer decisiones.
+      </li>
+      <li>
+        👨‍👩‍👧‍👦 <strong>Convivencia familiar</strong><br>
+        La convivencia familiar fortalece los vínculos afectivos y crea un entorno de confianza donde es más fácil hablar de temas difíciles.
+      </li>
+    </ul>
+  </div>
+</section>
+    <section id="tipos" class="tarjeta destacado">
+      <h2>Tipos de Sustancias</h2>
+      <img src="imagenes/tipos-sustancias.png" alt="Tipos" class="imagen imagen-banner">
+    </section>
+
+    <section id="video" class="tarjeta video">
+      <h2>🎥 Video Educativo</h2>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/HUngLgGRJpo" title="Video educativo" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="gobierno" class="tarjeta gobierno">
+      <h2>🏛️ Enlaces Oficiales</h2>
       <ul>
-        <li><a href="https://www.gob.mx/conasama/documentos/informe-sobre-la-situacion-de-la-salud-mental-y-el-consumo-de-sustancias-en-mexico?idiom=es" target="_blank">Gobierno de México - Información sobre Adicciones</a></li>
-        <li><a href="https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/info_sisvea/informes_sisvea_2023.pdf" target="_blank">SISTEMA DE VIGILANCIA EPIDEMIOLÓGICA DE LAS ADICCIONES - Informe SISVEA 2023 </a></li>
-        <li><a href="https://www.unodc.org/mexicoandcentralamerica/es/drogas.html" target="_blank">UNODC México - Drogas y Prevención</a></li>
+        <li><a href="https://www.gob.mx/conasama/documentos/informe-sobre-la-situacion-de-la-salud-mental-y-el-consumo-de-sustancias-en-mexico?idiom=es" target="_blank">Gobierno de México</a></li>
+        <li><a href="https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/info_sisvea/informes_sisvea_2023.pdf" target="_blank">Informe SISVEA 2023</a></li>
+        <li><a href="https://www.unodc.org/mexicoandcentralamerica/es/drogas.html" target="_blank">UNODC México</a></li>
       </ul>
     </section>
-  </main>
+  </div>
+
+  <div class="sos-container">
+    <div class="sos-icon" title="Haz clic para obtener ayuda">
+      <a href="https://www.gob.mx/salud" target="_blank">SOS</a>
+    </div>
+    <div class="sos-tooltip">
+      ¿Necesitas ayuda?<br>
+      📞 <strong>800 911 2000</strong><br>
+      👉 <a href="https://www.gob.mx/salud/acciones-y-programas/centro-de-atencion-ciudadana-contra-las-adicciones" target="_blank">Centro de Atención</a>
+    </div>
+  </div>
 
   <footer>
     <p>© 2025 | Sitio educativo para concientización</p>
-    <p>Plantilla de diseño con imágenes de canva.com</p>
+    <p>Imágenes de canva.com</p>
   </footer>
+
 <script>
   window.addEventListener('load', () => {
     const gigante = document.getElementById('gigante');
+    const secundaria = document.getElementById('imagen-secundaria');
+
     setTimeout(() => {
-      if (gigante) {
-        gigante.remove();
+      if (gigante) gigante.remove();
+
+      // Activar animación de la segunda imagen
+      if (secundaria) {
+        secundaria.style.animationPlayState = 'running';
       }
-    }, 3000); // 3 segundos = duración de la animación
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const fondo = document.getElementById('fondo-bolitas');
-    if (!fondo) return;
-
-    for (let i = 0; i < 40; i++) {
-      const bolita = document.createElement('div');
-      bolita.classList.add('bolita');
-
-      const size = Math.random() * 20 + 10;
-      bolita.style.width = `${size}px`;
-      bolita.style.height = `${size}px`;
-      bolita.style.left = `${Math.random() * 100}vw`;
-      bolita.style.top = `${Math.random() * 100}vh`;
-      bolita.style.animationDuration = `${20 + Math.random() * 10}s`;
-
-      fondo.appendChild(bolita);
-    }
+    }, 3000);
   });
 </script>
 
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const fondo = document.getElementById('fondo-bolitas');
+      if (!fondo) return;
+      for (let i = 0; i < 40; i++) {
+        const bolita = document.createElement('div');
+        bolita.classList.add('bolita');
+        const size = Math.random() * 20 + 10;
+        bolita.style.width = `${size}px`;
+        bolita.style.height = `${size}px`;
+        bolita.style.left = `${Math.random() * 100}vw`;
+        bolita.style.top = `${Math.random() * 100}vh`;
+        bolita.style.animationDuration = `${20 + Math.random() * 10}s`;
+        fondo.appendChild(bolita);
+      }
+    });
+  </script>
 </body>
 </html>
