@@ -382,3 +382,186 @@ h1, h2, h3, p, li, a {
     opacity: 0;
   }
 }
+
+.contenedor-final {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+.contenedor-final .tarjeta {
+  flex: 1 1 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.contenedor-final {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 30px 20px;
+}
+
+.contenedor-final .tarjeta {
+  flex: 1 1 400px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px #1E2870;
+  color: #1E2870;
+}
+
+.contenedor-final .tarjeta h2 {
+  font-size: 1.6em;
+  color: #1E2870;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.contenedor-final .tarjeta p,
+.contenedor-final .tarjeta ul {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #1E2870;
+}
+
+.contenedor-final .tarjeta a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contenedor-final .tarjeta a:hover {
+  text-decoration: underline;
+}
+
+.video iframe {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contenedor-final {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 30px 20px;
+}
+
+.contenedor-final .tarjeta {
+  flex: 1 1 400px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px #1E2870;
+  color: #1E2870;
+}
+
+.contenedor-final .tarjeta h2 {
+  font-size: 1.6em;
+  color: #1E2870;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.contenedor-final .tarjeta ul,
+.contenedor-final .tarjeta p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 0 auto 20px;
+  color: #1E2870;
+}
+
+.contenedor-final .tarjeta a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contenedor-final .tarjeta a:hover {
+  text-decoration: underline;
+}
+
+.video iframe {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#fondo-bolitas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bolita {
+  position: absolute;
+  border-radius: 50%;
+background: rgba(0, 255, 255, 0.3);
+ box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+  animation: flotar 12s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+}
+
+#fondo-bolitas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bolita {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.08); /* azul neón tenue */
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+  animation: flotar 20s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-60px) scale(1.2);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+}
+

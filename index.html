@@ -36,6 +36,7 @@
  <section class="contenedor-flex impar">
   <img src="imagenes/efectos-corto.png" alt=" Consecuencias a corto plazo" class="imagen">
   <div class="texto">
+    <section id="corto" class="contenedor-flex impar">
     <h2>Corto Plazo</h2>
     <p>⏱️ Los efectos inmediatos del consumo de drogas pueden manifestarse tanto a nivel físico como mental, y suelen aparecer minutos después de la ingesta.</p>
 
@@ -56,6 +57,8 @@
   <section class="contenedor-flex par">
   <img src="imagenes/efectos-medio.png" alt="Consecuencias a mediano plazo" class="imagen">
   <div class="texto">
+    <section id="medio" class="contenedor-flex par">
+  <h2>Mediano Plazo</h2>
     <h2>Mediano Plazo</h2>
     <p>🕒 El uso prolongado de sustancias puede alterar rutinas, debilitar la motivación y generar una desconexión progresiva con los objetivos personales.</p>
     <p>🏫 A nivel escolar, se traduce en distracciones constantes, pérdida de interés y bajo rendimiento.</p>
@@ -68,6 +71,7 @@
    <section class="contenedor-flex impar">
   <img src="imagenes/efectos-largo.png" alt="Consecuencias a largo plazo" class="imagen">
   <div class="texto">
+    <section id="largo" class="contenedor-flex impar">
     <h2>Largo Plazo</h2>
 
     <h3>🧠 Mentales</h3>
@@ -92,6 +96,7 @@
   <section class="contenedor-flex par">
   <img src="imagenes/gigante-azul.png" alt="Prevención" class="imagen">
   <div class="texto">
+    <section id="prevencion" class="contenedor-flex par">
     <h2>Prevención</h2>
     <ul>
       <li>
@@ -122,20 +127,22 @@
       <img src="imagenes/tipos-sustancias.png" alt="Tipos" class="imagen imagen-banner">
     </section>
 
-    <section id="video" class="tarjeta video">
-      <h2>🎥 Video Educativo</h2>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/HUngLgGRJpo" title="Video educativo" frameborder="0" allowfullscreen></iframe>
-    </section>
+<div class="contenedor-final">
+  <section id="video" class="tarjeta video">
+    <h2>🎥 Video Educativo</h2>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/HUngLgGRJpo" title="Video educativo" frameborder="0" allowfullscreen></iframe>
+  </section>
 
-    <section id="gobierno" class="tarjeta gobierno">
-      <h2>🏛️ Enlaces Oficiales</h2>
-      <ul>
-        <li><a href="https://www.gob.mx/conasama/documentos/informe-sobre-la-situacion-de-la-salud-mental-y-el-consumo-de-sustancias-en-mexico?idiom=es" target="_blank">Gobierno de México</a></li>
-        <li><a href="https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/info_sisvea/informes_sisvea_2023.pdf" target="_blank">Informe SISVEA 2023</a></li>
-        <li><a href="https://www.unodc.org/mexicoandcentralamerica/es/drogas.html" target="_blank">UNODC México</a></li>
-      </ul>
-    </section>
-  </div>
+  <section id="gobierno" class="tarjeta gobierno">
+    <h2>🏛️ Enlaces Oficiales</h2>
+    <ul>
+      <li><a href="https://www.gob.mx/conasama/documentos/informe-sobre-la-situacion-de-la-salud-mental-y-el-consumo-de-sustancias-en-mexico?idiom=es" target="_blank">Gobierno de México</a></li>
+      <li><a href="https://epidemiologia.salud.gob.mx/gobmx/salud/documentos/info_sisvea/informes_sisvea_2023.pdf" target="_blank">Informe SISVEA 2023</a></li>
+      <li><a href="https://www.unodc.org/mexicoandcentralamerica/es/drogas.html" target="_blank">UNODC México</a></li>
+    </ul>
+  </section>
+</div>
+
 
   <div class="sos-container">
     <div class="sos-icon" title="Haz clic para obtener ayuda">
@@ -167,24 +174,22 @@
       }
     }, 3000);
   });
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const fondo = document.getElementById('fondo-bolitas');
+    if (!fondo) return;
+    for (let i = 0; i < 40; i++) {
+      const bolita = document.createElement('div');
+      bolita.classList.add('bolita');
+      const size = Math.random() * 20 + 10;
+      bolita.style.width = `${size}px`;
+      bolita.style.height = `${size}px`;
+      bolita.style.left = `${Math.random() * 100}vw`;
+      bolita.style.top = `${Math.random() * 100}vh`;
+      bolita.style.animationDuration = `${20 + Math.random() * 10}s`;
+      fondo.appendChild(bolita);
+    }
+  });
 </script>
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const fondo = document.getElementById('fondo-bolitas');
-      if (!fondo) return;
-      for (let i = 0; i < 40; i++) {
-        const bolita = document.createElement('div');
-        bolita.classList.add('bolita');
-        const size = Math.random() * 20 + 10;
-        bolita.style.width = `${size}px`;
-        bolita.style.height = `${size}px`;
-        bolita.style.left = `${Math.random() * 100}vw`;
-        bolita.style.top = `${Math.random() * 100}vh`;
-        bolita.style.animationDuration = `${20 + Math.random() * 10}s`;
-        fondo.appendChild(bolita);
-      }
-    });
-  </script>
 </body>
-</html>
+</html
