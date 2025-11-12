@@ -1,567 +1,273 @@
-/* Fondo general */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: radial-gradient(circle at top, #4b0082 0%, #1a0033 100%);
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-  background-repeat: repeat;
-  color: #ffffff;
-  text-align: center;
-}
-
-/* Encabezado */
-header {
-  background-color: rgba(75, 0, 130, 0.8);
-  padding: 20px;
-  box-shadow: 0 0 10px #6a0dad;
-}
-
-.portada {
-  width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  border-bottom: 3px solid #aa00ff;
-}
-
-h1 {
-  font-size: 2.2em;
-  margin: 10px 0;
-  color: #FFFFFF;
-  text-shadow: 1px 1px 3px #000;
-}
-
-.indice-con-imagen {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 30px;
-  margin: 40px 20px;
-  flex-wrap: wrap;
-}
-
-/* Índice alineado a la izquierda */
-.indice {
-  background-color: rgba(255, 255, 255, 0.08);
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 0 15px #6a0dad;
-  width: 280px;
-  text-align: left;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-}
-
-.indice:hover {
-  transform: scale(1.02);
-}
-
-.indice h2 {
-  font-size: 1.8em;
-  color: #1E2870;
-  margin-bottom: 15px;
-  text-align: center;
-  text-shadow: 1px 1px 3px #000;
-}
-
-.indice ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.indice li {
-  margin: 12px 0;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.indice li:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.indice a {
-  color: #1E2870;
-  font-weight: bold;
-  text-decoration: none;
-  display: block;
-  padding: 5px;
-  font-size: 1.1em;
-}
-
-.indice a:hover {
-  text-decoration: underline;
-  color: #ffffff;
-}
-
-/* Imagen al costado derecho del índice */
-.imagen-indice img {
-  max-width: 600px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 12px #aa00ff;
-}
-
-
-/* Contenido principal */
-main {
-  padding: 30px 20px;
-}
-
-section {
-  margin-bottom: 40px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px #1E2870;
-}
-
-h2 {
-  font-size: 1.6em;
-  color: #1E2870;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 2px #000;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  color: #1E2870;
-}
-
-/* Imágenes medianas */
-img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border: 2px solid #aa00ff;
-  border-radius: 10px;
-  box-shadow: 0 0 12px #aa00ff;
-}
-
-/* Imagen tipo banner */
-.imagen-banner {
-  max-width: 600px;
-  border: 3px solid #1E2870;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #1E2870;
-}
-
-/* Imagen gigante animada */
-#gigante {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 100vh;
-  background-image: url('imagenes/gigante.png');
-  background-size: cover;
-  background-position: center;
-  z-index: 9999;
-  animation: asomarGigante 3s ease-out forwards;
-}
-
-@keyframes asomarGigante {
-  0% { opacity: 0; transform: translateX(-100%); }
-  30% { opacity: 1; transform: translateX(0); }
-  70% { opacity: 1; transform: translateX(0); }
-  100% { opacity: 0; transform: translateX(-100%); }
-}
-
-/* Fondo de bolitas animadas */
-#fondo-bolitas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.bolita {
-  position: absolute;
-  border-radius: 50%;
-background-color: rgba(0, 150, 255, 0.6);
-  animation: moverBolita linear infinite;
-
-}
-
-@keyframes moverBolita {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateY(-100vh) scale(1.2);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 0.3;
-  }
-}
-
-/* Asegura que el contenido esté por encima */
-main, header, nav, footer {
-  position: relative;
-  z-index: 1;
-}
-
-.sos-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  text-align: center;
-}
-
-.sos-icon {
-  width: 60px;
-  height: 60px;
-  background-color: #ff0000;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #ff4d4d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.1em;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.sos-icon:hover {
-  transform: scale(1.1);
-}
-
-.sos-icon a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.sos-tooltip {
-  display: none;
-  margin-top: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #000000;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 0.95em;
-  max-width: 250px;
-  box-shadow: 0 0 10px #000000;
-}
-
-.sos-tooltip a {
-  color: #0000000;
-  text-decoration: underline;
-}
-
-.sos-container:hover .sos-tooltip {
-  display: block;
-}
-
-.contenedor-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
-  text-align: left;
-}
-
-.contenedor-flex .imagen {
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  border: 2px solid #aa00ff;
-  border-radius: 10px;
-  box-shadow: 0 0 12px #aa00ff;
-  flex-shrink: 0;
-}
-
-.contenedor-flex .texto {
-  flex: 1;
-  min-width: 250px;
-  color: #1E2870;
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
-/* Alternar orden en secciones pares */
-.contenedor-flex.par {
-  flex-direction: row-reverse;
-}
-
-/* Secciones con imagen e información alternadas */
-.contenedor-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-  margin: 40px 20px;
-  text-align: left;
-}
-
-/* Imagen a la izquierda, texto a la derecha */
-.contenedor-flex.impar {
-  flex-direction: row;
-}
-
-/* Imagen a la derecha, texto a la izquierda */
-.contenedor-flex.par {
-  flex-direction: row-reverse;
-}
-
-/* Imagen estilo */
-.contenedor-flex .imagen {
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  border: 2px solid #aa00ff;
-  border-radius: 10px;
-  box-shadow: 0 0 12px #aa00ff;
-  flex-shrink: 0;
-}
-
-/* Texto estilo */
-.contenedor-flex .texto {
-  flex: 1;
-  min-width: 250px;
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #1E2870;
-}
-
-/* Asegura que todo el texto tenga el color correcto */
-h1, h2, h3, p, li, a {
-  color: #1E2870;
-}
-
-#imagen-secundaria {
-  position: fixed;
-  bottom: -100vh; /* empieza fuera de pantalla abajo */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: 300px;
-  background-image: url('imagenes/imagen-secundaria.png'); /* ajusta si usas otro nombre */
-  background-size: cover;
-  background-position: center;
-  z-index: 9998;
-  animation: subirDesdeAbajo 8s ease-out forwards; /* 8s total: 1.5s subir + 5s visible + 1.5s bajar */
-  animation-play-state: paused;
-  opacity: 0;
-}
-
-@keyframes subirDesdeAbajo {
-  0% {
-    bottom: -100vh;
-    opacity: 0;
-  }
-  20% {
-    bottom: 100px;
-    opacity: 1;
-  }
-  80% {
-    bottom: 100px;
-    opacity: 1;
-  }
-  100% {
-    bottom: -100vh;
-    opacity: 0;
-  }
-}
-
-.contenedor-final {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 40px auto;
-  max-width: 900px;
-  flex-wrap: wrap;
-}
-
-.contenedor-final .tarjeta {
-  flex: 1 1 400px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-}
-
-.contenedor-final {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: 40px auto;
-  max-width: 900px;
-  padding: 30px 20px;
-}
-
-.contenedor-final .tarjeta {
-  flex: 1 1 400px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px #1E2870;
-  color: #1E2870;
-}
-
-.contenedor-final .tarjeta h2 {
-  font-size: 1.6em;
-  color: #1E2870;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 2px #000;
-}
-
-.contenedor-final .tarjeta p,
-.contenedor-final .tarjeta ul {
-  font-size: 1.1em;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  color: #1E2870;
-}
-
-.contenedor-final .tarjeta a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.contenedor-final .tarjeta a:hover {
-  text-decoration: underline;
-}
-
-.video iframe {
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.contenedor-final {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 30px 20px;
-}
-
-.contenedor-final .tarjeta {
-  flex: 1 1 400px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px #1E2870;
-  color: #1E2870;
-}
-
-.contenedor-final .tarjeta h2 {
-  font-size: 1.6em;
-  color: #1E2870;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 2px #000;
-}
-
-.contenedor-final .tarjeta ul,
-.contenedor-final .tarjeta p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin: 0 auto 20px;
-  color: #1E2870;
-}
-
-.contenedor-final .tarjeta a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.contenedor-final .tarjeta a:hover {
-  text-decoration: underline;
-}
-
-.video iframe {
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-#fondo-bolitas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.bolita {
-  position: absolute;
-  border-radius: 50%;
-background: rgba(0, 255, 255, 0.3);
- box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
-  animation: flotar 12s ease-in-out infinite;
-}
-
-@keyframes flotar {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.2;
-  }
-  50% {
-    transform: translateY(-30px) scale(1.1);
-    opacity: 0.1;
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 0.2;
-  }
-}
-
-#fondo-bolitas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.bolita {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(0, 255, 255, 0.08); /* azul neón tenue */
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
-  animation: flotar 20s ease-in-out infinite;
-}
-
-@keyframes flotar {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.2;
-  }
-  50% {
-    transform: translateY(-60px) scale(1.2);
-    opacity: 0.1;
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 0.2;
-  }
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Consecuencias del Uso de las Drogas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div id="fondo-bolitas"></div>
+  <div id="gigante" class="asomar"></div>
+  <div id="imagen-secundaria" class="deslizante"></div>
+
+  <header class="bloque-header">
+    <img src="imagenes/portada.png" alt="Portada: Drogas" class="portada">
+    <h1>Concientización sobre Sustancias</h1>
+  </header>
+
+  <div class="indice-con-imagen">
+    <nav class="indice">
+      <h2>📚 Índice</h2>
+      <ul>
+        <li><a href="#corto">Corto Plazo</a></li>
+        <li><a href="#medio">Mediano Plazo</a></li>
+        <li><a href="#largo">Largo Plazo</a></li>
+        <li><a href="#prevencion">Prevención</a></li>
+        <li><a href="#tipos">Tipos</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#gobierno">Enlaces</a></li>
+      </ul>
+    </nav>
+    <div class="imagen-indice">
+      <img src="imagenes/imagen-lateral.png" alt="Imagen lateral">
+    </div>
+  </div>
+
+  <main>
+   <section id="corto" class="contenedor-flex impar">
+  <h2>Corto Plazo</h2>
+  <div class="efecto">
+    <h3>⏱️ Euforia</h3>
+    <img src="imagenes/euforia.png" alt="Persona eufórica" class="imagen-efecto">
+    <p>Estado de ánimo elevado, sensación de energía y entusiasmo desmedido.</p>
+  </div>
+
+  <div class="efecto">
+    <h3>🤢 Mareos</h3>
+    <img src="imagenes/mareos.png" alt="Persona mareada" class="imagen-efecto">
+    <p>Desorientación, pérdida de equilibrio y visión borrosa.</p>
+  </div>
+
+  <div class="efecto">
+    <h3>🎭 Alucinaciones</h3>
+    <img src="imagenes/alucinaciones.png" alt="Percepción alterada" class="imagen-efecto">
+    <p>Distorsión de la realidad, percepción de cosas que no existen.</p>
+  </div>
+
+  <div class="efecto">
+    <h3>🚶‍♂️ Temblores</h3>
+    <img src="imagenes/temblores.png" alt="Manos temblando" class="imagen-efecto">
+    <p>Movimientos involuntarios, dificultad para coordinar acciones simples.</p>
+  </div>
+</section>
+    <section id="medio" class="seccion-mediano">
+  <h2>Mediano Plazo</h2>
+  <p>🕒 El uso prolongado de sustancias puede generar consecuencias que afectan la vida cotidiana, el rendimiento académico y las relaciones familiares.</p>
+
+  <div class="grid-mediano">
+    <div class="efecto-mediano">
+      <img src="imagenes/alteracion-rutinas.png" alt="Alteración de rutinas">
+      <h3>Alteración de Rutinas</h3>
+      <p>Desorganización diaria, pérdida de hábitos saludables y desconexión de objetivos personales.</p>
+    </div>
+
+    <div class="efecto-mediano">
+      <img src="imagenes/rendimiento-escolar.png" alt="Bajo rendimiento escolar">
+      <h3>Bajo Rendimiento Escolar</h3>
+      <p>Dificultad para concentrarse, bajo desempeño y desinterés por el aprendizaje.</p>
+    </div>
+
+    <div class="efecto-mediano">
+      <img src="imagenes/conflictos-familiares.png" alt="Conflictos familiares">
+      <h3>Conflictos Familiares</h3>
+      <p>Problemas de comunicación, discusiones frecuentes y debilitamiento del apoyo emocional.</p>
+    </div>
+  </div>
+</section>
+   <section id="largo" class="seccion-largo">
+  <h2>Largo Plazo</h2>
+  <p>🔮 Las consecuencias a largo plazo pueden afectar profundamente la salud mental y física, incluso de forma irreversible.</p>
+
+  <div class="grid-largo">
+    <div class="efecto-largo">
+      <img src="imagenes/adiccion-mental.png" alt="Adicción y trastornos mentales">
+      <h3>🧠 Mentales</h3>
+      <p>Desarrollo de adicción, ansiedad crónica, depresión y trastornos mentales graves.</p>
+    </div>
+
+    <div class="efecto-largo">
+      <img src="imagenes/dano-fisico.png" alt="Daños físicos">
+      <h3>💪 Físicos</h3>
+      <p>Riesgo cardiovascular, daño orgánico irreversible y efectos persistentes de sustancias alucinógenas o depresoras.</p>
+    </div>
+  </div>
+</section>   
+
+   <section id="prevencion" class="seccion-prevencion">
+  <h2>Prevención</h2>
+  <p>🛡️ Incorporar hábitos saludables y fortalecer relaciones positivas son la base para prevenir el consumo de drogas.</p>
+
+  <div class="grid-prevencion">
+    <div class="tarjeta-prevencion">
+      <img src="imagenes/deporte.png" alt="Deporte">
+      <h3>🏃‍♂️ Deporte</h3>
+
+    </div>
+
+    <div class="tarjeta-prevencion">
+      <img src="imagenes/arte.png" alt="Arte">
+      <h3>🎨 Arte</h3>
+          </div>
+
+    <div class="tarjeta-prevencion">
+      <img src="imagenes/internet-positivo.png" alt="Internet positivo">
+      <h3>🌐 Internet positivo</h3>
+     
+    </div>
+
+    <div class="tarjeta-prevencion">
+      <img src="imagenes/convivencia.png" alt="Convivencia">
+      <h3>👨‍👩‍👧‍👦 Convivencia</h3>
+      
+    </div>
+  </div>
+</section>
+  <section id="tipos" class="tarjeta destacado">
+  <h2>Tipos de Sustancias</h2>
+  <a href="https://montefenix.org.mx/tipos-de-drogas-y-sus-consecuencias/" target="_blank">
+    <img src="imagenes/tipos-sustancias.png" alt="Tipos" class="imagen imagen-banner">
+  </a>
+   <p>click en la imagen para saber mas.</p>
+</section>
+<section id="rompecabezas" class="rompecabezas-seccion">
+  <h2>Rompecabezas Educativo</h2>
+  <p>Arrastra las piezas para completar el rompecabezas sobre prevención y tipos de sustancias.</p>
+
+  <div class="puzzle-grid">
+    <!-- Zona donde se colocan las piezas -->
+    <div class="drop-zone" id="drop1"></div>
+    <div class="drop-zone" id="drop2"></div>
+    <div class="drop-zone" id="drop3"></div>
+    <div class="drop-zone" id="drop4"></div>
+    <div class="drop-zone" id="drop5"></div>
+    <div class="drop-zone" id="drop6"></div>
+    <div class="drop-zone" id="drop7"></div>
+    <div class="drop-zone" id="drop8"></div>
+    <div class="drop-zone" id="drop9"></div>
+  </div>
+
+  <div class="puzzle-pieces">
+    <!-- Piezas que se pueden arrastrar -->
+    <img src="imagenes/pieza1.png" id="pieza1" class="pieza" draggable="true">
+    <img src="imagenes/pieza2.png" id="pieza2" class="pieza" draggable="true">
+    <img src="imagenes/pieza3.png" id="pieza3" class="pieza" draggable="true">
+    <img src="imagenes/pieza4.png" id="pieza4" class="pieza" draggable="true">
+    <img src="imagenes/pieza5.png" id="pieza5" class="pieza" draggable="true">
+    <img src="imagenes/pieza6.png" id="pieza6" class="pieza" draggable="true">
+    <img src="imagenes/pieza7.png" id="pieza7" class="pieza" draggable="true">
+    <img src="imagenes/pieza8.png" id="pieza8" class="pieza" draggable="true">
+    <img src="imagenes/pieza9.png" id="pieza9" class="pieza" draggable="true">
+  </div>
+</section>
+    <section id="video" class="tarjeta video">
+      <h2>🎥 Video Educativo</h2>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/HUngLgGRJpo" title="Video educativo" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="gobierno" class="tarjeta gobierno">
+      <h2>🏛️ Enlaces Oficiales</h2>
+      <ul>
+        <li><a href="https://www.gob.mx/conasama" target="_blank">Gobierno de México</a></li>
+        <li><a href="https://epidemiologia.salud.gob.mx" target="_blank">Informe SISVEA</a></li>
+        <li><a href="https://www.unodc.org/mexicoandcentralamerica" target="_blank">UNODC México</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="sos-container">
+    <div class="sos-icon" title="Haz clic para obtener ayuda">
+      <a href="https://www.gob.mx/salud" target="_blank">SOS</a>
+    </div>
+    <div class="sos-tooltip">
+      ¿Necesitas ayuda?<br>
+      📞 <strong>800 911 2000</strong><br>
+      👉 <a href="https://www.gob.mx/salud/acciones-y-programas/centro-de-atencion-ciudadana-contra-las-adicciones" target="_blank">Centro de Atención</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 | Sitio educativo</p>
+    <p>Imágenes: canva.com</p>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      const gigante = document.getElementById('gigante');
+      const secundaria = document.getElementById('imagen-secundaria');
+      setTimeout(() => {
+        if (gigante) gigante.remove();
+        if (secundaria) secundaria.style.animationPlayState = 'running';
+      }, 3000);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const fondo = document.getElementById('fondo-bolitas');
+      if (!fondo) return;
+      for (let i = 0; i < 40; i++) {
+        const bolita = document.createElement('div');
+        bolita.classList.add('bolita');
+        const size = Math.random() * 20 + 10;
+        bolita.style.width = `${size}px`;
+        bolita.style.height = `${size}px`;
+        bolita.style.left = `${Math.random() * 100}vw`;
+        bolita.style.top = `${Math.random() * 100}vh`;
+        bolita.style.animationDuration = `${20 + Math.random() * 10}s`;
+        fondo.appendChild(bolita);
+      }
+    });
+  </script>
+<script>
+  const piezas = document.querySelectorAll('.pieza');
+  const zonas = document.querySelectorAll('.drop-zone');
+
+  piezas.forEach(pieza => {
+    pieza.addEventListener('dragstart', e => {
+      e.dataTransfer.setData('text/plain', pieza.id);
+    });
+  });
+
+  zonas.forEach(zona => {
+    zona.addEventListener('dragover', e => {
+      e.preventDefault();
+    });
+
+    zona.addEventListener('drop', e => {
+      e.preventDefault();
+      const id = e.dataTransfer.getData('text/plain');
+      const pieza = document.getElementById(id);
+      if (!zona.hasChildNodes()) {
+        zona.appendChild(pieza);
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
